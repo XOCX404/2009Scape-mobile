@@ -196,9 +196,8 @@ public class PojavLoginActivity extends BaseActivity {
         mkdirs(Tools.DIR_GAME_HOME + "/lwjgl3");
         mkdirs(Tools.DIR_GAME_HOME + "/config");
         mkdirs(Tools.DIR_DATA + "/music");
-        mkdirs(Tools.DIR_DATA + "/plugins");
-        mkdirs(Tools.DIR_DATA + "/plugins/BasicInputQOL");
         mkdirs(Tools.DIR_DATA + "/effects");
+        mkdirs(Tools.DIR_DATA + "/plugins");
         mkdirs(Tools.CTRLMAP_PATH);
         try {
             Tools.copyAssetFile(this, "components/security/pro-grade.jar", Tools.DIR_DATA, true);
@@ -242,29 +241,34 @@ public class PojavLoginActivity extends BaseActivity {
                 Tools.copyAssetFile(this,"config.json",Tools.DIR_DATA, true);
 
                 // MobileClientBindings
-                Tools.copyAssetFile(this, "MobileClientBindings1.0.zip",Tools.DIR_DATA, true);
-                Tools.ZipTool.unzip(new File(Tools.DIR_DATA+ "/MobileClientBindings1.0.zip"),
-                        new File(Tools.DIR_DATA + "/plugins/MobileClientBindings/"));
+                Tools.copyAssetFile(this, "MobileClientBindings.zip",Tools.DIR_DATA, true);
+                Tools.ZipTool.unzip(new File(Tools.DIR_DATA+ "/MobileClientBindings.zip"),
+                        new File(Tools.DIR_DATA + "/plugins/"));
+
+                // GroundItemsOverlay
+                Tools.copyAssetFile(this, "GroundItemsOverlay.zip",Tools.DIR_DATA, true);
+                Tools.ZipTool.unzip(new File(Tools.DIR_DATA+ "/GroundItemsOverlay.zip"),
+                        new File(Tools.DIR_DATA + "/plugins/"));
 
                 // LoginTimer
-                Tools.copyAssetFile(this, "LoginTimer1.2.zip",Tools.DIR_DATA, true);
-                Tools.ZipTool.unzip(new File(Tools.DIR_DATA+ "/LoginTimer1.2.zip"),
-                        new File(Tools.DIR_DATA + "/plugins/LoginTimer/"));
+                Tools.copyAssetFile(this, "LoginTimer.zip",Tools.DIR_DATA, true);
+                Tools.ZipTool.unzip(new File(Tools.DIR_DATA+ "/LoginTimer.zip"),
+                        new File(Tools.DIR_DATA + "/plugins/"));
 
                 // RememberMyLogin
-                Tools.copyAssetFile(this, "RememberMyLogin1.0.zip",Tools.DIR_DATA, true);
-                Tools.ZipTool.unzip(new File(Tools.DIR_DATA+ "/RememberMyLogin1.0.zip"),
-                        new File(Tools.DIR_DATA + "/plugins/RememberMyLogin/"));
+                Tools.copyAssetFile(this, "RememberMyLogin.zip",Tools.DIR_DATA, true);
+                Tools.ZipTool.unzip(new File(Tools.DIR_DATA+ "/RememberMyLogin.zip"),
+                        new File(Tools.DIR_DATA + "/plugins/"));
 
                 // SlayerTrackerPlugin
-                Tools.copyAssetFile(this, "SlayerTrackerPlugin1.0.zip",Tools.DIR_DATA, true);
-                Tools.ZipTool.unzip(new File(Tools.DIR_DATA+ "/SlayerTrackerPlugin1.0.zip"),
-                        new File(Tools.DIR_DATA + "/plugins/SlayerTrackerPlugin/"));
+                Tools.copyAssetFile(this, "SlayerTrackerPlugin.zip",Tools.DIR_DATA, true);
+                Tools.ZipTool.unzip(new File(Tools.DIR_DATA+ "/SlayerTrackerPlugin.zip"),
+                        new File(Tools.DIR_DATA + "/plugins/"));
 
                 // XPDropPlugin
-                Tools.copyAssetFile(this, "XPDropPlugin1.2.zip",Tools.DIR_DATA, true);
-                Tools.ZipTool.unzip(new File(Tools.DIR_DATA+ "/XPDropPlugin1.2.zip"),
-                        new File(Tools.DIR_DATA + "/plugins/XPDropPlugin/"));
+                Tools.copyAssetFile(this, "XPDropPlugin.zip",Tools.DIR_DATA, true);
+                Tools.ZipTool.unzip(new File(Tools.DIR_DATA+ "/XPDropPlugin.zip"),
+                        new File(Tools.DIR_DATA + "/plugins/"));
 
                 /*
                 // Extract predumped sounds
